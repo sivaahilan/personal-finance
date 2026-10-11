@@ -93,7 +93,7 @@ export default function Dashboard() {
                           {l.category}
                         </span>
                       </td>
-                      <td><BudgetBar actual={l.actual} budget={l.budget} /></td>
+                      <td style={{ minWidth: 140 }}><BudgetBar actual={l.actual} budget={l.budget} /></td>
                       <td className="num">{money(l.actual)}</td>
                       <td className={`num small ${l.budget !== null && l.actual > l.budget ? 'over' : 'muted'}`} style={{ width: 90 }}>
                         {l.budget !== null ? `${Math.round((l.actual / l.budget) * 100)}%` : ''}
